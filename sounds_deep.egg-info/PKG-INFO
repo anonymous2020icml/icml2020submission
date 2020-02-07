@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: sounds-deep
+Version: 0.1.0.dev3
+Summary: NEAR Labs deep learning built on TensorFlow and Sonnet
+Home-page: UNKNOWN
+Author: Eleanor Quint
+Author-email: pquint@cse.unl.edu
+License: MIT
+Description: # sounds-deep [![Build Status](https://travis-ci.org/DrKwint/sounds-deep.svg?branch=master)](https://travis-ci.org/DrKwint/sounds-deep)
+        
+        A library built on top of TensorFlow, Sonnet, and Sacred to faciliate deep learning research.
+        
+        Version: 0.1.0.dev1
+        
+        ## Requirements
+        
+        - Python 3.6
+        - virtualenv is strongly recommended
+        - CUDA 9.0 and cuDNN (if enabling GPU)
+        
+        ## Installation
+        
+        Clone to repository, `cd` into the root directory, activate a virtual environment (optional), and run
+        
+        ```bash
+        pip install -r requirements.txt
+        pip uninstall tensorflow && pip install tensorflow-gpu # run this line if you want to enable GPU
+        ```
+        
+        Setup s more complicated than this on `Crane`, but talk to Ellie directly about it because we don't have an automated process nailed down yet.
+        
+        Documentation on `master` can be found at [sounds-deep.readthedocs.io](https://sounds-deep.readthedocs.io/en/latest/) or can be built by running
+        
+        ```bash
+        ./docs/build_scrip.sh
+        ```
+        
+        and pointing a browser at `./docs_build/index.html`
+        
+        Because the use of this package is expected to stay within the lab right now, you can find me in person or on slack with any questions.
+        
+        ## Usage
+        
+        ```python
+        import sounds_deep as sd
+        ```
+        
+        ## Modules
+        
+        - `contrib.data`: Easy downloading of standard datasets and loading for TensorFlow
+        - `contrib.distributions`: Handles distributions in ways not done in `tf.contrib.distributions` (use `tfd` when possible)
+        - `contrib.experiments`: Executable files with command line interfaces which train a model
+        - `contrib.models`: `Sonnet` modules implementing entire model frameworks
+        - `contrib.parameterized_distributions`: Distributions with parameters baked in
+        - `contrib.sacred_ingredients`: Classes inheriting from `Sacred.Ingredient`
+        
+        ## Contributing
+        
+        Everyone in the lab is invited to contribute code pertaining to Sonnet, TensorFlow, or deep learning/machine learning with Python.
+        
+        ### Author
+        
+        Eleanor Quint, a Ph.D. student in the computer science and engineering department at the University of Nebraska-Lincoln
+        
+Keywords: deep_learning machine_learning tensorflow
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: dev
+Provides-Extra: test
